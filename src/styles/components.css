@@ -1,0 +1,16 @@
+.progress-bar-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+.progress-bar-pct {
+  font-weight: 600;
+}
+.progress-bar-track {
+  width: 100%;
+  background: var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+}

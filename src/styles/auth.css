@@ -1,0 +1,99 @@
+.auth-layout {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: linear-gradient(to bottom, #141E61, #0F044C);
+}
+
+.auth-brand {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #fff;
+}
+
+.auth-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.auth-logo span {
+  font-size: 36px;
+}
+
+.auth-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.auth-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: #121414;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.dark-card label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dark-card input,
+.dark-card select,
+.dark-card textarea {
+  background: #1E2122;
+  border-color: #333;
+  color: #fff;
+}
+
+.dark-card input::placeholder {
+  color: #888;
+}
+
+.dark-card .error-text {
+  color: #f44336;
+}
+
+.dark-card a {
+  color: #7B9FD4;
+}
+
+.auth-footer-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dark-card .auth-form-title {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.dark-card .auth-submit-btn {
+  margin-top: 8px;
+}
+
+.auth-server-error {
+  text-align: center;
+  margin-bottom: 12px;
+}

@@ -1,0 +1,271 @@
+.home-greeting-card {
+  margin-bottom: 16px;
+}
+.home-greeting-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.home-greeting-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.home-greeting-subtitle {
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+.home-summary-card {
+  margin-bottom: 16px;
+}
+.home-summary-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+.home-risk-badge {
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.risk-low {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+.risk-medium {
+  background: #FFF3E0;
+  color: #E65100;
+}
+.risk-high {
+  background: #FFEBEE;
+  color: #C62828;
+}
+.home-mood-card {
+  margin-bottom: 16px;
+}
+.home-chat-card {
+  margin-bottom: 16px;
+}
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.chat-header-icon {
+  font-size: 28px;
+}
+.chat-header-info h3 {
+  font-size: 1rem;
+}
+.chat-header-info p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.chat-toggle-btn {
+  margin-left: auto;
+}
+
+/* ScreenPage */
+.screen-info-card {
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #FFF3E0, #FFECB3);
+}
+.screen-info-card h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.screen-info-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.screen-history-card {
+  margin-bottom: 16px;
+}
+.screen-history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.screen-history-item:last-child {
+  border-bottom: none;
+}
+
+/* SleepPage */
+.sleep-target-card {
+  margin-bottom: 16px;
+}
+.sleep-target-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sleep-target-values {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
+.sleep-target-values div span:first-child {
+  color: var(--text-muted);
+}
+.sleep-chart-card {
+  margin-bottom: 16px;
+}
+.sleep-stats-card {
+  margin-bottom: 16px;
+}
+.sleep-insight {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+.sleep-record-item {
+  margin-bottom: 8px;
+  padding: 12px 16px;
+}
+.sleep-record-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sleep-record-time {
+  font-weight: 500;
+}
+.sleep-record-duration {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* HealthPage */
+.health-hipertension-card {
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #FFEBEE, #FFCDD2);
+}
+.health-hipertension-card h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.health-hipertension-card p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.health-hipertension-list {
+  font-size: 0.85rem;
+  margin-top: 8px;
+  padding-left: 20px;
+}
+.health-dass-intro {
+  text-align: center;
+}
+.health-dass-intro p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.health-emergency-card {
+  background: #FFF3E0;
+  margin-bottom: 16px;
+}
+.health-emergency-card p {
+  font-size: 0.85rem;
+}
+
+/* SettingsPage */
+.settings-section {
+  margin-bottom: 16px;
+}
+.settings-profile p {
+  margin-bottom: 4px;
+}
+.settings-notif-status {
+  color: var(--success);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+.settings-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.settings-emergency-card {
+  background: #FFF3E0;
+  margin-bottom: 16px;
+}
+.settings-footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 24px;
+}
+
+/* OnboardingPage */
+.onboarding-container {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(160deg, #E8EEF6 0%, #F0F4F8 100%);
+}
+.onboarding-content {
+  max-width: 400px;
+  width: 100%;
+}
+.onboarding-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.onboarding-emoji {
+  font-size: 48px;
+}
+.onboarding-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.onboarding-desc {
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+.onboarding-card {
+  margin-bottom: 16px;
+}
+.onboarding-focus-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.onboarding-focus-btn {
+  padding: 14px 16px;
+  border-radius: 12px;
+  text-align: left;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.onboarding-focus-btn.selected {
+  border-color: var(--primary);
+  background: rgba(74, 111, 165, 0.08);
+}
+.onboarding-focus-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.onboarding-focus-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+.onboarding-btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
