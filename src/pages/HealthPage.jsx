@@ -149,7 +149,7 @@ export default function HealthPage() {
       {/* Prediksi AI */}
       <div className="card" style={{ marginBottom: 16, background: 'linear-gradient(135deg, #E8EAF6, #E3F2FD)', color: '#1a1a1a' }}>
         <h3 style={{ fontSize: '1rem', marginBottom: 8 }}>🤖 Analisis Risiko AI</h3>
-        <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: 12 }}>
+        <p style={{ fontSize: '0.85rem', color: '#1a3a5c', marginBottom: 12 }}>
           Model AI kami menganalisis pola tidur & gaya hidup kamu.<br />
           <strong>Akurasi model: 90.9%</strong> · Bukan diagnosis medis.
         </p>
