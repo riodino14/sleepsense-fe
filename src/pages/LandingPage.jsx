@@ -309,7 +309,7 @@ export default function LandingPage() {
       {/* ── FOOTER ── */}
       <footer style={{ position: 'relative', zIndex: 1, borderTop: '1px solid rgba(255,255,255,0.06)', padding: '28px 5%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ fontSize: 20 }}>😴</span>
+          <img src={logoUrl} alt="SleepSense Logo" style={{ width: 24, height: 24, objectFit: 'contain' }} />
           <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700 }}>Sleep<span style={{ color: '#7C3AED' }}>Sense</span></span>
         </div>
         <div style={{ fontSize: '0.8rem', color: '#334155', textAlign: 'center' }}>
