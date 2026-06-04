@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-
+import logoUrl from '../assets/logo.png';
 // ── Star background generator ─────────────────────────────────
 function Stars() {
   const stars = Array.from({ length: 120 }, (_, i) => ({
@@ -133,11 +133,16 @@ export default function LandingPage() {
         animation: 'slideDown 0.5s both',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <span style={{ fontSize: 26 }}>😴</span>
+          <img 
+            src={logoUrl} 
+            alt="SleepSense Logo" 
+            style={{ width: 32, height: 32, objectFit: 'contain' }} 
+          />
           <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.25rem', fontWeight: 700, letterSpacing: '-0.02em' }}>
             Sleep<span style={{ color: '#A78BFA' }}>Sense</span>
           </span>
         </div>
+        
         <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
           <button onClick={() => navigate('/login')} className="land-btn" style={{
             padding: '8px 20px', borderRadius: 24,
