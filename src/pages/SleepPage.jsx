@@ -7,11 +7,19 @@ import SleepForm from '../components/SleepForm';
 import ProgressBar from '../components/ProgressBar';
 
 // ── Komponen Modal Edit ───────────────────────────────────────
+function calcDuration(bedtime, wakeTime) {
+  if (!bedtime || !wakeTime) return null;
+  const [bh, bm] = bedtime.split(':').map(Number);
+  const [wh, wm] = wakeTime.split(':').map(Number);
+  let dur = (wh + wm / 60) - (bh + bm / 60);
+  if (dur < 0) dur += 24;
+  return Math.round(dur * 10) / 10;
+}
+
 function EditSleepModal({ record, onSave, onClose }) {
   const [form, setForm] = useState({
     bedtime: record.bedtime || '',
     wakeTime: record.wakeTime || '',
-    duration: record.duration || '',
     qualityScore: record.qualityScore || '',
     screenTimeBefore: record.screenTimeBefore || '',
     notes: record.notes || '',
@@ -19,10 +27,13 @@ function EditSleepModal({ record, onSave, onClose }) {
   });
   const [saving, setSaving] = useState(false);
 
+  // Durasi dihitung otomatis dari bedtime & wakeTime
+  const duration = calcDuration(form.bedtime, form.wakeTime);
+
   const handleSave = async () => {
-    if (!form.duration) return;
+    if (!form.bedtime || !form.wakeTime) return;
     setSaving(true);
-    await onSave(form);
+    await onSave({ ...form, duration: duration ?? record.duration ?? 0 });
     setSaving(false);
   };
 
@@ -57,11 +68,22 @@ function EditSleepModal({ record, onSave, onClose }) {
               onChange={e => setForm(f => ({ ...f, wakeTime: e.target.value }))} />
           </div>
         </div>
-        <div className="input-group">
-          <label>Durasi (jam) *</label>
-          <input type="number" min="0.5" max="24" step="0.5" value={form.duration}
-            onChange={e => setForm(f => ({ ...f, duration: e.target.value }))} />
-        </div>
+        {/* Durasi otomatis — dihitung dari jam tidur & jam bangun */}
+        {duration !== null && (
+          <div style={{
+            background: 'var(--bg-main)', borderRadius: 10,
+            padding: '10px 14px', marginBottom: 12,
+            display: 'flex', alignItems: 'center', gap: 8,
+            fontSize: '0.88rem', color: 'var(--text-secondary)'
+          }}>
+            🕐 Durasi:&nbsp;
+            <strong style={{
+              color: duration >= 7 ? 'var(--success)' : duration >= 6 ? 'var(--warning)' : '#E53E3E'
+            }}>
+              {duration} jam
+            </strong>
+          </div>
+        )}
         <div className="input-group">
           <label>Skor Kualitas (1-10)</label>
           <input type="number" min="1" max="10" value={form.qualityScore}
@@ -80,7 +102,7 @@ function EditSleepModal({ record, onSave, onClose }) {
 
         <div style={{ display: 'flex', gap: 10, marginTop: 8 }}>
           <button className="btn btn-outline btn-sm" style={{ flex: 1 }} onClick={onClose}>Batal</button>
-          <button className="btn btn-primary btn-sm" style={{ flex: 2 }} onClick={handleSave} disabled={saving || !form.duration}>
+          <button className="btn btn-primary btn-sm" style={{ flex: 2 }} onClick={handleSave} disabled={saving || !form.bedtime || !form.wakeTime}>
             {saving ? '⏳ Menyimpan...' : '💾 Simpan Perubahan'}
           </button>
         </div>
